@@ -1,64 +1,188 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#061e3f">
-  <meta name="description" content="Your Mantara Villas guest welcome page. Access Wi-Fi, save our contact, leave a review, and reach us on WhatsApp.">
-  <title>Mantara Villas · Tapx</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23061e3f'/%3E%3Ctext x='32' y='45' font-size='44' font-family='Georgia' text-anchor='middle' fill='white'%3EM%3C/text%3E%3Ccircle cx='51' cy='13' r='5' fill='%23f32230'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
-  <script src="config.js" defer></script>
-  <script src="app.js" defer></script>
-</head>
-<body>
-  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <symbol id="wifi" viewBox="0 0 24 24"><path d="M2 8.5a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0M8.5 15.5a5.5 5.5 0 0 1 7 0"/><circle cx="12" cy="19" r="1"/></symbol>
-    <symbol id="contact" viewBox="0 0 24 24"><rect x="5" y="3" width="15" height="18" rx="3"/><path d="M3 7h4M3 12h4M3 17h4M9 17c0-3 7-3 7 0"/><circle cx="12.5" cy="9" r="2.5"/></symbol>
-    <symbol id="star" viewBox="0 0 24 24"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9Z"/></symbol>
-    <symbol id="chat" viewBox="0 0 24 24"><path d="M21 11.5a9 9 0 0 1-13.2 8L3 21l1.4-4.8A9 9 0 1 1 21 11.5Z"/><path d="M8 7.5c-.7 1 .3 3.1 2 4.8s3.8 2.7 4.8 2l1.1-1.1-2.5-1.5-.8.8a7.1 7.1 0 0 1-2.8-2.8l.8-.8-1.5-2.5Z"/></symbol>
-    <symbol id="copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M15 8V4H4v11h4"/></symbol>
-    <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
-  </svg>
-  <main class="page">
-    <div class="topline"><span class="tapx-wordmark small" aria-label="Tapx">tap<span>x</span><i></i></span><span>YOUR STAY, SIMPLIFIED</span></div>
-    <article class="villa-card" aria-labelledby="villa-name">
-      <div class="photo-panel">
-        <img class="villa-photo" src="assets/villa.jpg" alt="Illustrative tropical villa and swimming pool" width="1200" height="1000" fetchpriority="high">
-        <div class="photo-shade"></div>
-        <span class="welcome-tag"><span></span>WELCOME TO YOUR STAY</span>
-        <div class="photo-caption"><span>SETTLE IN. SLOW DOWN.</span><p>Make yourself<br>at home.</p><div class="caption-line"></div></div>
-        <span class="sample-photo">Illustrative villa photograph</span>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#061e3f" />
+    <meta
+      name="description"
+      content="Your Mantara Villas guest welcome page. Access Wi-Fi, save our contact, leave a review, and reach us on WhatsApp."
+    />
+    <title>Mantara Villas · Tapx</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23061e3f'/%3E%3Ctext x='32' y='45' font-size='44' font-family='Georgia' text-anchor='middle' fill='white'%3EM%3C/text%3E%3Ccircle cx='51' cy='13' r='5' fill='%23f32230'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="config.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <svg
+      class="icon-library"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+    >
+      <symbol id="wifi" viewBox="0 0 24 24">
+        <path
+          d="M2 8.5a16 16 0 0 1 20 0M5 12a11 11 0 0 1 14 0M8.5 15.5a5.5 5.5 0 0 1 7 0"
+        />
+        <circle cx="12" cy="19" r="1" />
+      </symbol>
+      <symbol id="contact" viewBox="0 0 24 24">
+        <rect x="5" y="3" width="15" height="18" rx="3" />
+        <path d="M3 7h4M3 12h4M3 17h4M9 17c0-3 7-3 7 0" />
+        <circle cx="12.5" cy="9" r="2.5" />
+      </symbol>
+      <symbol id="star" viewBox="0 0 24 24">
+        <path
+          d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9Z"
+        />
+      </symbol>
+      <symbol id="chat" viewBox="0 0 24 24">
+        <path d="M21 11.5a9 9 0 0 1-13.2 8L3 21l1.4-4.8A9 9 0 1 1 21 11.5Z" />
+        <path
+          d="M8 7.5c-.7 1 .3 3.1 2 4.8s3.8 2.7 4.8 2l1.1-1.1-2.5-1.5-.8.8a7.1 7.1 0 0 1-2.8-2.8l.8-.8-1.5-2.5Z"
+        />
+      </symbol>
+      <symbol id="copy" viewBox="0 0 24 24">
+        <rect x="8" y="8" width="12" height="12" rx="2" />
+        <path d="M15 8V4H4v11h4" />
+      </symbol>
+      <symbol id="close" viewBox="0 0 24 24">
+        <path d="m6 6 12 12M6 18 18 6" />
+      </symbol>
+    </svg>
+    <main class="page">
+      <div class="topline">
+        <span class="tapx-wordmark small" aria-label="Tapx"
+          >tap<span>x</span><i></i></span
+        ><span>YOUR STAY, SIMPLIFIED</span>
       </div>
-      <div class="guest-panel">
-        <div class="villa-logo" id="villa-logo" aria-label="Mantara Villas logo"><span>M</span><i></i></div>
-        <div class="villa-heading"><p class="eyebrow">A WARM WELCOME TO</p><h1 id="villa-name">Mantara <em>Villas</em></h1><p class="intro">A little less planning. A little more relaxing.</p></div>
-        <div class="actions" aria-label="Guest services">
-          <button class="action primary" data-action="wifi"><span class="action-icon"><svg><use href="#wifi"/></svg></span><span class="action-label"><strong>Connect to Wi-Fi</strong><small>Get online &amp; feel at home</small></span><span class="action-end"><svg><use href="#wifi"/></svg></span></button>
-          <button class="action" data-action="contact"><span class="action-icon"><svg><use href="#contact"/></svg></span><span class="action-label"><strong>Save villa contact</strong><small>Keep us just a call away</small></span><span class="action-end">.vcf</span></button>
-          <button class="action" data-action="review"><span class="action-icon"><svg><use href="#star"/></svg></span><span class="action-label"><strong>Leave a Google review</strong><small>We’d love to hear about your stay</small></span><span class="google-g" aria-hidden="true">G</span></button>
-          <button class="action" data-action="whatsapp"><span class="action-icon"><svg><use href="#chat"/></svg></span><span class="action-label"><strong>Chat with the villa</strong><small>Say hello on WhatsApp</small></span><span class="action-end"><svg><use href="#chat"/></svg></span></button>
+      <article class="villa-card" aria-labelledby="villa-name">
+        <div class="photo-panel">
+          <img
+            class="villa-photo"
+            src="assets/villa.jpg"
+            alt="Illustrative tropical villa and swimming pool"
+            width="1200"
+            height="1000"
+            fetchpriority="high"
+          />
+          <div class="photo-shade"></div>
+          <span class="welcome-tag"><span></span>WELCOME TO YOUR STAY</span>
+          <div class="photo-caption">
+            <span>SETTLE IN. SLOW DOWN.</span>
+            <p>Make yourself<br />at home.</p>
+            <div class="caption-line"></div>
+          </div>
+          <span class="sample-photo">Illustrative villa photograph</span>
         </div>
-        <div class="guest-note"><span class="tiny-cross">✦</span><span>Everything you need, in one little place.</span></div>
+        <div class="guest-panel">
+          <div
+            class="villa-logo"
+            id="villa-logo"
+            aria-label="Mantara Villas logo"
+          >
+            <span>M</span><i></i>
+          </div>
+          <div class="villa-heading">
+            <p class="eyebrow">A WARM WELCOME TO</p>
+            <h1 id="villa-name">Mantara <em>Villas</em></h1>
+            <p class="intro">A little less planning. A little more relaxing.</p>
+          </div>
+          <div class="actions" aria-label="Guest services">
+            <button class="action primary" data-action="wifi">
+              <span class="action-icon"
+                ><svg><use href="#wifi" /></svg></span
+              ><span class="action-label"
+                ><strong>Connect to Wi-Fi</strong
+                ><small>Get online &amp; feel at home</small></span
+              ><span class="action-end"
+                ><svg><use href="#wifi" /></svg
+              ></span>
+            </button>
+            <button class="action" data-action="contact">
+              <span class="action-icon"
+                ><svg><use href="#contact" /></svg></span
+              ><span class="action-label"
+                ><strong>Save villa contact</strong
+                ><small>Keep us just a call away</small></span
+              ><span class="action-end">.vcf</span>
+            </button>
+            <button class="action" data-action="review">
+              <span class="action-icon"
+                ><svg><use href="#star" /></svg></span
+              ><span class="action-label"
+                ><strong>Leave a Google review</strong
+                ><small>We’d love to hear about your stay</small></span
+              ><span class="google-g" aria-hidden="true">G</span>
+            </button>
+            <button class="action" data-action="whatsapp">
+              <span class="action-icon"
+                ><svg><use href="#chat" /></svg></span
+              ><span class="action-label"
+                ><strong>Chat with the villa</strong
+                ><small>Say hello on WhatsApp</small></span
+              ><span class="action-end"
+                ><svg><use href="#chat" /></svg
+              ></span>
+            </button>
+          </div>
+          <div class="guest-note">
+            <span class="tiny-cross">✦</span
+            ><span>Everything you need, in one little place.</span>
+          </div>
+        </div>
+      </article>
+      <footer class="tapx-card">
+        <div class="footer-brand">
+          <span class="powered">Powered by</span
+          ><span id="tapx-logo" class="tapx-wordmark" aria-label="Tapx"
+            >tap<span>x</span><i></i
+          ></span>
+        </div>
+        <div class="footer-divider"></div>
+        <p class="footer-copy">
+          One tap.<br /><strong>More connection.</strong>
+        </p>
+        <button class="tapx-contact" data-action="tapx">
+          <svg><use href="#chat" /></svg>Contact Tapx<span
+            class="whatsapp-label"
+            >on WhatsApp</span
+          >
+        </button>
+      </footer>
+      <p class="page-credit">CONNECTED WITH CARE <span>·</span> TAPX</p>
+    </main>
+    <dialog id="wifi-dialog" aria-labelledby="wifi-title">
+      <button class="dialog-close" aria-label="Close Wi-Fi details">
+        <svg><use href="#close" /></svg>
+      </button>
+      <span class="modal-icon"
+        ><svg><use href="#wifi" /></svg
+      ></span>
+      <p class="eyebrow">MAKE YOURSELF AT HOME</p>
+      <h2 id="wifi-title">Stay connected.</h2>
+      <p class="dialog-intro" id="wifi-description">
+        Select this network in your device’s Wi-Fi settings.
+      </p>
+      <div class="wifi-details">
+        <div>
+          <span>Network name</span><strong id="wifi-name">Ask reception</strong>
+        </div>
+        <div>
+          <span>Password</span><strong id="wifi-password">Ask reception</strong>
+        </div>
       </div>
-    </article>
-    <footer class="tapx-card">
-      <div class="footer-brand"><span class="powered">Powered by</span><span id="tapx-logo" class="tapx-wordmark" aria-label="Tapx">tap<span>x</span><i></i></span></div>
-      <div class="footer-divider"></div>
-      <p class="footer-copy">One tap.<br><strong>More connection.</strong></p>
-      <button class="tapx-contact" data-action="tapx"><svg><use href="#chat"/></svg>Contact Tapx<span class="whatsapp-label">on WhatsApp</span></button>
-    </footer>
-    <p class="page-credit">CONNECTED WITH CARE <span>·</span> TAPX</p>
-  </main>
-  <dialog id="wifi-dialog" aria-labelledby="wifi-title">
-    <button class="dialog-close" aria-label="Close Wi-Fi details"><svg><use href="#close"/></svg></button>
-    <span class="modal-icon"><svg><use href="#wifi"/></svg></span>
-    <p class="eyebrow">MAKE YOURSELF AT HOME</p><h2 id="wifi-title">Stay connected.</h2>
-    <p class="dialog-intro" id="wifi-description">Select this network in your device’s Wi-Fi settings.</p>
-    <div class="wifi-details"><div><span>Network name</span><strong id="wifi-name">Ask reception</strong></div><div><span>Password</span><strong id="wifi-password">Ask reception</strong></div></div>
-    <button class="copy-button" id="copy-password"><svg><use href="#copy"/></svg>Copy password</button>
-    <p class="dialog-note">Your browser cannot join a Wi-Fi network automatically.</p>
-  </dialog>
-  <div id="toast" class="toast" role="status" aria-live="polite"></div>
-</body>
+      <button class="copy-button" id="copy-password">
+        <svg><use href="#copy" /></svg>Copy password
+      </button>
+      <p class="dialog-note">
+        Your browser cannot join a Wi-Fi network automatically.
+      </p>
+    </dialog>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </body>
 </html>
