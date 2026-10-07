@@ -2,7 +2,7 @@
 window.VILLA_CONFIG = {
   name: 'Mantara Villas',
   villaLogo: '',
-  tapxLogo: '',
+  tapxLogo: 'assets/tapx-logo.webp',
   phone: '',
   email: '',
   address: '',

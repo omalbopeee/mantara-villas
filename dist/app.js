@@ -13,6 +13,7 @@
   }
   setLogo('villa-logo', config.villaLogo, `${name} logo`);
   setLogo('tapx-logo', config.tapxLogo, 'Tapx logo');
+  setLogo('tapx-header-logo', config.tapxLogo, 'Tapx logo');
   const toast = document.getElementById('toast');
   let toastTimer;
   function notify(message) {
